@@ -40,7 +40,7 @@ resource "aws_autoscaling_policy" "up" {
 }
 
 resource "aws_cloudwatch_metric_alarm" "up" {
-  alarm_name          = "DemoClusterScaleUpAlarm"    // "${format("alarm-up-%s", module.ecs.cluster_name)}"
+  alarm_name          = "DemoClusterScaleUpAlarm"
   comparison_operator = "GreaterThanOrEqualToThreshold"
   evaluation_periods  = "1"
   metric_name         = "CPUReservation"
@@ -68,7 +68,7 @@ resource "aws_autoscaling_policy" "down" {
 }
 
 resource "aws_cloudwatch_metric_alarm" "down" {
-  alarm_name          = "DemoClusterScaleDownAlarm" // "${format("alarm-down-%s", module.ecs.cluster_name)}"
+  alarm_name          = "DemoClusterScaleDownAlarm"
   comparison_operator = "LessThanThreshold"
   evaluation_periods  = "1"
   metric_name         = "CPUReservation"
