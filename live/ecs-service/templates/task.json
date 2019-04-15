@@ -1,0 +1,14 @@
+[{
+  "Name": "${name}",
+  "image": "${docker_image}",
+  "MountPoints": [],
+  "Essential": true,
+  "Cpu": 1024,
+  "MemoryReservation": 512,
+  "PortMappings": [{
+      "HostPort": 80,
+      "ContainerPort": 80,
+      "Protocol": "tcp"
+    }
+  ]
+}]
